@@ -1,0 +1,12 @@
+---
+triple:          'x86_64-apple-darwin'
+binary-path:     '/Users/armankhoshnevis/Library/CloudStorage/OneDrive-MichiganStateUniversity/PhD/5-Spring24/ParallelComputing/Projects/Project1/project-1-team-4/project1'
+relocations:
+  - { offsetInCU: 0x26, offset: 0x26, size: 0x8, addend: 0x0, symName: _main, symObjAddr: 0x0, symBinAddr: 0x100003C40, symSize: 0x160 }
+  - { offsetInCU: 0x4463, offset: 0x4463, size: 0x8, addend: 0x0, symName: __ZNSt3__14endlB7v160006IcNS_11char_traitsIcEEEERNS_13basic_ostreamIT_T0_EES7_, symObjAddr: 0x180, symBinAddr: 0x100003DC0, symSize: 0x50 }
+  - { offsetInCU: 0x44A3, offset: 0x44A3, size: 0x8, addend: 0x0, symName: __ZNSt3__19use_facetB7v160006INS_5ctypeIcEEEERKT_RKNS_6localeE, symObjAddr: 0x260, symBinAddr: 0x100003EA0, symSize: 0x30 }
+  - { offsetInCU: 0x6D57, offset: 0x6D57, size: 0x8, addend: 0x0, symName: _main, symObjAddr: 0x0, symBinAddr: 0x100003C40, symSize: 0x160 }
+  - { offsetInCU: 0x6EC1, offset: 0x6EC1, size: 0x8, addend: 0x0, symName: __ZNSt3__113basic_ostreamIcNS_11char_traitsIcEEElsB7v160006EPFRS3_S4_E, symObjAddr: 0x160, symBinAddr: 0x100003DA0, symSize: 0x20 }
+  - { offsetInCU: 0x6EF3, offset: 0x6EF3, size: 0x8, addend: 0x0, symName: __ZNKSt3__19basic_iosIcNS_11char_traitsIcEEE5widenB7v160006Ec, symObjAddr: 0x1D0, symBinAddr: 0x100003E10, symSize: 0x90 }
+  - { offsetInCU: 0x6F5F, offset: 0x6F5F, size: 0x8, addend: 0x0, symName: __ZNKSt3__15ctypeIcE5widenB7v160006Ec, symObjAddr: 0x290, symBinAddr: 0x100003ED0, symSize: 0x30 }
+...
