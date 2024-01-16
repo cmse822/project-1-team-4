@@ -25,7 +25,7 @@ void deleteMatrix(float** matrix, int rows) {
 float** fillMatrixValues(float** matrix, int rows, int cols) {
     for (int i = 0; i<rows; i++) {
         for (int j = 0; j<cols; j++) {
-            matrix[i][j] = (rand() % 10);
+            matrix[i][j] = static_cast<float>(rand()) / RAND_MAX;
         }   
     }
     return matrix;
