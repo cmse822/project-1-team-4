@@ -23,5 +23,13 @@
             matrix_A[i][j] = static_cast<float>(std::rand()) / RAND_MAX * 10.0;
         }
     }
-    std::cout << matrix_A << std::endl;
+    
+    // Display the randomly initialized matrix
+    std::cout << "Randomly Initialized Matrix:" << std::endl;
+    for (int i = 0; i < row1; ++i) {
+        for (int j = 0; j < column1; ++j) {
+            std::cout << matrix_A[i][j] << " ";
+        }
+        std::cout << std::endl;
+    }
  }
