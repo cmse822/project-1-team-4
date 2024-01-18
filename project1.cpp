@@ -1,6 +1,7 @@
 // Project 1 - Matrix Multiplication
 //
 #include <iostream>
+#include <sys/time.h>
 
 using namespace std;
 
@@ -40,6 +41,16 @@ void printMatrixValues(float** matrix, int rows, int cols) {
     }
 }
 
+void get_walltime_(double* wcTime) {
+    struct timeval tp;
+    gettimeofday(&tp, NULL);
+    *wcTime = (double)(tp.tv_sec + tp.tv_usec/1000000.0);
+}
+
+void get_walltime(double* wcTime) {
+    get_walltime_(wcTime);
+}
+
 int main() {
 
     /*
@@ -58,6 +69,9 @@ int main() {
     B = fillMatrixValues(B, n, m);
     C = fillMatrixValues(C, m, p);
 
+    double startTime, endTime;
+    get_walltime(&startTime);
+
     // Matrix-Matrix Multiplication
     for (int i = 0; i<n; i++) {
         for (int j = 0; j<m; j++) {
@@ -67,6 +81,8 @@ int main() {
         }
     }
 
+    get_walltime(&endTime);
+
     // Print out entries of A
     cout << "Entries of B Matrix" << endl;
     printMatrixValues(B, n, m);
@@ -74,6 +90,8 @@ int main() {
     printMatrixValues(C, m, p);
     cout << "Entries of A Matrix" << endl;
     printMatrixValues(A, n, p);
+
+    cout << "Time taken for matrix multiplication: " << (endTime - startTime) << " seconds." << endl;
 
     return 0;
 }
