@@ -1,3 +1,4 @@
+[![Review Assignment Due Date](https://classroom.github.com/assets/deadline-readme-button-24ddc0f5d75046c5622901739e7c5dd533143b0c8e959d652212380cedb1ea36.svg)](https://classroom.github.com/a/z6CYgFxj)
 # Project 1: Memory Hierarchies and Performance of Serial Applications
 
 ## Due: EOD, 23 January
@@ -33,6 +34,27 @@ Then, as a group, compute the arithmetic intensities of the following kernels in
 ```
 
 Included a table in your project report listing the arithmetic intensities for these kernels.
+
+### Answer for arithmetic intensities:
+
+* First kernel:
+  1. Three flops including two summations and one multiplication.
+  2. Three reads including `A[j][i]`, `B[i]`, and `Y[j]`, and one write `Y[j]`
+  3. Arithmetic Intensity = $\frac{3}{4 \times 8}$
+* Second kernel:
+  1. Two flops including one summation and one multiplication.
+  2. One read which includes `A[i]`
+  3. `s` is a constant and stays in register. Therefore its read and write assumes to happen instantly.
+  4. Arithmetic Intensity = $\frac{2}{1 \times 8}$
+* Third kernel:
+  1. Two flops including one summation and one multiplication.
+  2. Two reads including `A[i]` and `B[i]`.
+  3. `s` is a constant and stays in register. Therefore its read and write assumes to happen instantly.
+  4. Arithmetic Intensity = $\frac{2}{2 \times 8}$
+* Fourth kernel:
+  1. Two flops including one summation and one multiplication.
+  2. Two reads including `A[i]` and `B[i]`, and one write including `Y[i]`.
+  3. Arithmetic Intensity = $\frac{2}{3 \times 8}$
 
 ## Part 1: Matrix-matrix Multiplication
 
