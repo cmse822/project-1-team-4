@@ -9,7 +9,7 @@ In this first part of the project, you will test the performance of the basic ma
 Code found in project1.cpp.
 
 2. For a given matrix size _N_, what is the total number of floating point operations performed by this operator?
-
+- The matrix multiplication will require 2*N^3 - N^2 operations.
 
 
 3. Using the supplied C routine `get_walltime.c`, or any other accurate means of measuring time, compute the performance in Mflop/s of the matrix-matrix multiply for _N_=100\. Be sure to perform enough repeat calculations of the timing to overcome any statistical noise in the measurement.

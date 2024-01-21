@@ -1,0 +1,20 @@
+     6.74 FP64 GFLOPs
+
+   353.12 Weight
+
+    26.93 L1
+    21.09 L2
+    14.94 DRAM
+
+META_DATA
+  FLOPS          4
+  ERT_VERSION  1.1.0
+  HOSTNAME  ('daniels-mbp-2.gha.chartermi.net', ['116.1.168.192.in-addr.arpa'], ['192.168.1.116'])
+  UNAME  uname_result(system='Darwin', node='Daniels-MBP-2.gha.chartermi.net', release='21.6.0', version='Darwin Kernel Version 21.6.0: Mon Aug 22 20:17:10 PDT 2022; root:xnu-8020.140.49~2/RELEASE_X86_64', machine='x86_64', processor='i386')
+  TIMESTAMP_DATA  1705795554.019056
+  CONFIG  {'ERT_RESULTS': ['./'], 'ERT_DRIVER': ['driver1'], 'ERT_KERNEL': ['kernel1'], 'ERT_FLOPS': ['1-8'], 'ERT_ALIGN': ['32'], 'ERT_SPEC_GBYTES_L1': ['28.8'], 'ERT_SPEC_GBYTES_L2': ['115.2'], 'ERT_SPEC_GBYTES_L3': ['230.4'], 'ERT_CC': ['g++'], 'ERT_CFLAGS': ['-O3'], 'ERT_LD': ['g++'], 'ERT_LDFLAGS': [], 'ERT_LDLIBS': [], 'ERT_RUN': ['./ERT_CODE'], 'ERT_NUM_EXPERIMENTS': ['5'], 'ERT_MEMORY_MAX': ['1073741824'], 'ERT_WORKING_SET_MIN': ['8'], 'ERT_TRIALS_MIN': ['1'], 'ERT_GNUPLOT': ['gnuplot'], 'ERT_MPI': [False], 'ERT_OPENMP': [False], 'ERT_GPU': [False], 'ERT_HIP': [False], 'ERT_PRECISION': ['FP64'], 'ERT_OCL': [False], 'ERT_SYCL': [False], 'ERT_WSS_MULT': [1.1]}
+  TIMESTAMP_DATA  1705795590.183529
+  TIMESTAMP_DATA  1705795627.591598
+  TIMESTAMP_DATA  1705795676.639631
+  TIMESTAMP_DATA  1705795727.744147
+   
