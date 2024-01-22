@@ -23,7 +23,7 @@ Included a table in your project report listing the arithmetic intensities for t
 | Kernel # | Arithmetic Intensity | 
 | -------- | -------- | 
 |  1   | 0.0938  | 
-|  2   | 0.025  |
+|  2   | 0.25  |
 |  3   | 0.125   |
 |  4   | 0.0833  |
 
