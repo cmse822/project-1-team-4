@@ -54,7 +54,7 @@ void get_walltime(double* wcTime) {
 
 int main() {
 
-    std::ofstream outputFile("runtime4750.txt", std::ios::app);
+    std::ofstream outputFile("runtime550.txt", std::ios::app);
 
     /*
     Program to perform Matrix-Matrix Multiplication
@@ -62,7 +62,7 @@ int main() {
 
     */
 
-    int n = 4750; // # Rows of B
+    int n = 550; // # Rows of B
     int m = n; // # Columns of B & # Rows of C
     int p = n; // # Coulmns of C
 
