@@ -1,5 +1,5 @@
 # Intel i7 Chris Test
-ERT_RESULTS Results.RunChrisHPCC.01
+ERT_RESULTS ./
 
 ERT_DRIVER  driver1
 ERT_KERNEL  kernel1
