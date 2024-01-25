@@ -57,18 +57,19 @@ Included a table in your project report listing the arithmetic intensities for t
 3.  Performance for N = 100:
     1.  Intel Xeon Gold (20 core, 2.1 GHz) - 309 MFlops/s
     2.  Intel I5 (2 core, 2.3 GHz) - 501 MFlops/s
-    3.  Intel i7 (4 core, 3.4 GHz) - 
+    3.  # Intel i7 (4 core, 3.4 GHz) - 
 
 4. Theoretical maximum performance based on hardware specs:
     1. Intel Xeon Gold 6230, 20 cores, 2.1 GHz = 42 GFlops/s
         - Measured performance is 0.74% of theoretical peak
     2. Intel I5 dual core, 2.3 GHz, 2 FMA units per core = 14.4 GFlops/s 
         - measured performance is 3.54% of the theoretical peak
-    3. Intel i7 quad core, 3.4 GHz, 2 FPUs per core = 27.2 GFlops/s
-        - Measured performance is 
+    3. # Intel i7 quad core, 3.4 GHz, 2 FPUs per core = 27.2 GFlops/s
+        - # Measured performance is 
 5. Plot of the resulting measured Gflop/s vs. N.
     1. Intel I5 dual core, 2.3 GHz:
       - ![Alt text](./MacPerformance.png)
+    2. # HPCC Intel-18 Dev Node
 
 6. The measured performance is much lower than the theoretical peak. There are various performance "levels" in the plot, meaning regions where the performance is relatively constant versus array size, beyond which the performance degrades quickly. These levels are associated with the cache size. With smaller values of N, the entire array is able to fit on L1 cache, thereby leading to an increase of GFlops/s until completely filled. Once the array can no longer fit on L1 cache, L2 cache is populated. The first major reduction in speed likely occurs once the array can no longer fit on L1 cache. Similarly, once the array can no longer fit on L2 cache, L3 cache is populated, and there is another reduction in speed. Beyond L3 cache, the reduction in speed is more constistend with array size, as the array is being written and read from memory rather than cache. 
  
@@ -96,7 +97,7 @@ Included a table in your project report listing the arithmetic intensities for t
 
 3. HP Spectre - Quad Core Intel i7 3.4GHz: 
 CHANGE ROOFLINE MODEL HERE
-    -   ![Alt text](./MacRooflineResult.png)
+    -   ![Alt text](./ChrisHPCCRoofline.png)
     1. Peak Performance = 12.5 GFLOPs/s
     2. L1 Cache = 57.1 GB/s, ridge point ~0.2 FLOPs/Byte
     3. L2 = 44.1 GB/s, ridge point ~0.28 FLOPs/byte
