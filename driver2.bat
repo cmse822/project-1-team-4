@@ -1,3 +1,29 @@
+.\project_10.exe
+.\project_10.exe
+.\project_10.exe
+.\project_10.exe
+.\project_10.exe
+.\project_10.exe
+.\project_10.exe
+.\project_10.exe
+.\project_10.exe
+.\project_10.exe
+
+echo "Done with 10"
+
+.\project_25.exe
+.\project_25.exe
+.\project_25.exe
+.\project_25.exe
+.\project_25.exe
+.\project_25.exe
+.\project_25.exe
+.\project_25.exe
+.\project_25.exe
+.\project_25.exe
+
+echo "Done with 25"
+
 .\project_50.exe
 .\project_50.exe
 .\project_50.exe
@@ -10,6 +36,19 @@
 .\project_50.exe
 
 echo "Done with 50"
+
+.\project_75.exe
+.\project_75.exe
+.\project_75.exe
+.\project_75.exe
+.\project_75.exe
+.\project_75.exe
+.\project_75.exe
+.\project_75.exe
+.\project_75.exe
+.\project_75.exe
+
+echo "Done with 75"
 
 .\project_100.exe
 .\project_100.exe
