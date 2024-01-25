@@ -70,49 +70,67 @@ int main(int argc, char *argv[]) {
     int m = n; // # Columns of B & # Rows of C
     int p = n; // # Columns of C
 
-    float** A = createMatrix(n, p);
-    float** B = createMatrix(n, m);
-    float** C = createMatrix(m, p);
+    int totalIterations = 10;
+    int iteration = 0;
 
-    B = fillMatrixValues(B, n, m);
-    C = fillMatrixValues(C, m, p);
+    double totalRuntimes[totalIterations];
 
-    double startTime, endTime;
-    get_walltime(&startTime);
+    while (iteration < totalIterations) {
+        float** A = createMatrix(n, p);
+        float** B = createMatrix(n, m);
+        float** C = createMatrix(m, p);
 
-    // Matrix-Matrix Multiplication
-        for (int i = 0; i<n; i++) {
-            for (int j = 0; j<m; j++) {
-                for (int k = 0; k<p; k++) {
-                A[i][j] += B[i][k]*C[k][j];
+        B = fillMatrixValues(B, n, m);
+        C = fillMatrixValues(C, m, p);
+
+        double startTime, endTime;
+        get_walltime(&startTime);
+
+        // Matrix-Matrix Multiplication
+            for (int i = 0; i<n; i++) {
+                for (int j = 0; j<m; j++) {
+                    for (int k = 0; k<p; k++) {
+                    A[i][j] += B[i][k]*C[k][j];
+                }
             }
         }
+
+        get_walltime(&endTime);
+
+        // Store runtime in totalRuntimes, not printed to save time & ease output
+        double runtime = endTime - startTime;
+        // std::cout << "Runtime: " << runtime << " seconds" << std::endl;
+        totalRuntimes[iteration] = runtime;
+
+
+        // Cleanup memory
+        deleteMatrix(A, n);
+        deleteMatrix(B, n);
+        deleteMatrix(C, m);
+
+        //Dan - Commenting this out for speed purposes 
+        
+        // Print out entries of A
+        // cout << "Entries of B Matrix" << endl;
+        // printMatrixValues(B, n, m);
+        // cout << "Entries of C Matrix" << endl;
+        // printMatrixValues(C, m, p);
+        // cout << "Entries of A Matrix" << endl;
+        // printMatrixValues(A, n, p);
+
+
+        iteration++;
     }
 
-    get_walltime(&endTime);
+    double sumRuntimes = 0;
 
-    // Print the runtime to the console
-    double runtime = endTime - startTime;
-    std::cout << "Runtime: " << runtime << " seconds" << std::endl;
+    for (int i = 0; i < totalIterations; i++) {
+        sumRuntimes += totalRuntimes[i]; // Summing up all the elements
+    }
 
-    // Cleanup memory
-    deleteMatrix(A, n);
-    deleteMatrix(B, n);
-    deleteMatrix(C, m);
+    double meanRuntime = sumRuntimes / totalIterations; // Calculating the mean
 
-    //Dan - Commenting this out for speed purposes 
-    
-    // Print out entries of A
-    // cout << "Entries of B Matrix" << endl;
-    // printMatrixValues(B, n, m);
-    // cout << "Entries of C Matrix" << endl;
-    // printMatrixValues(C, m, p);
-    // cout << "Entries of A Matrix" << endl;
-    // printMatrixValues(A, n, p);
-
-    cout << "Time taken for matrix multiplication: " << (endTime - startTime) << " seconds." << endl;
-
-
+    cout << "Average time taken for matrix multiplication: " << meanRuntime << " seconds." << endl;
 
     return 0;
 }
