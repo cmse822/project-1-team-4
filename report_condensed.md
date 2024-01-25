@@ -68,7 +68,7 @@ Included a table in your project report listing the arithmetic intensities for t
         - Measured performance is 
 5. Plot of the resulting measured Gflop/s vs. N.
     1. Intel I5 dual core, 2.3 GHz:
-      ![Alt text](./MacPerformance.png)
+      - ![Alt text](./MacPerformance.png)
 
 6. The measured performance is much lower than the theoretical peak. There are various performance "levels" in the plot, meaning regions where the performance is relatively constant versus array size, beyond which the performance degrades quickly. These levels are associated with the cache size. With smaller values of N, the entire array is able to fit on L1 cache, thereby leading to an increase of GFlops/s until completely filled. Once the array can no longer fit on L1 cache, L2 cache is populated. The first major reduction in speed likely occurs once the array can no longer fit on L1 cache. Similarly, once the array can no longer fit on L2 cache, L3 cache is populated, and there is another reduction in speed. Beyond L3 cache, the reduction in speed is more constistend with array size, as the array is being written and read from memory rather than cache. 
  
