@@ -15,7 +15,7 @@ def main():
 
     for n in n_array:
         # Run the C++ program with the current 'n' and capture the output
-        result = subprocess.run(["project_integrated.exe", str(n), str(iterations)], capture_output=True, text=True, shell=True)
+        result = subprocess.run(["project_integrated.exe", str(n), str(iterations)], stdout=subprocess.PIPE, stderr=subprocess.PIPE, universal_newlines=True, shell=True)
         output = result.stdout
         error = result.stderr
 
