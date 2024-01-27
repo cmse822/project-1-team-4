@@ -23,7 +23,7 @@ Included a table in your project report listing the arithmetic intensities for t
 | Kernel # | Arithmetic Intensity | 
 | -------- | -------- | 
 |  1   | 0.0938  | 
-|  2   | 0.25  |
+|  2   | 0.25    |
 |  3   | 0.125   |
 |  4   | 0.0833  |
 
@@ -57,15 +57,15 @@ Included a table in your project report listing the arithmetic intensities for t
 3.  Performance for N = 100:
     1.  Intel Xeon Gold (20 core, 2.1 GHz) - 309 MFlops/s
     2.  Intel I5 (2 core, 2.3 GHz) - 501 MFlops/s
-    3.  # Intel i7 (4 core, 3.4 GHz) - 
+    3.  Intel Xeon Gold 6230 (20 cores, 2.4 GHz, 2 FPUs per core) - 96 GFlops/s
 
 4. Theoretical maximum performance based on hardware specs:
     1. Intel Xeon Gold 6230, 20 cores, 2.1 GHz = 42 GFlops/s
         - Measured performance is 0.74% of theoretical peak
     2. Intel I5 dual core, 2.3 GHz, 2 FMA units per core = 14.4 GFlops/s 
-        - measured performance is 3.54% of the theoretical peak
-    3. # Intel i7 quad core, 3.4 GHz, 2 FPUs per core = 27.2 GFlops/s
-        - # Measured performance is 
+        - Measured performance is 3.54% of the theoretical peak
+    3. Intel Xeon Gold 6230, 20 cores, 2.4 GHz, 2 FPUs per core = 96 GFlops/s
+        - ### Measured performance is
 5. Plot of the resulting measured Gflop/s vs. N.
     1. Intel I5 dual core, 2.3 GHz:
       - ![Alt text](./MacPerformance.png)
