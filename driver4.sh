@@ -1,7 +1,19 @@
 #!/bin/bash
 
-# Define an array of values (100, 200, 300, etc.)
-values=(10 25 50 75 100 200 300 400 500 600 700 800 900 1000 150 250 350 450 550 650 750 850 950)
+# Define an array of values
+values=(10 25 50 75)
+
+for value in $(seq 100 50 950); do
+    values+=($value)
+done
+
+for value in $(seq 1000 100 1900); do
+    values+=($value)
+done
+
+for value in $(seq 2000 250 5000); do
+    values+=($value)
+done
 
 # Define the number of iterations
 iterations=10

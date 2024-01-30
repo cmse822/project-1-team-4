@@ -71,6 +71,8 @@ int main(int argc, char *argv[]) {
     int p = n; // # Columns of C
 
     int totalIterations = std::atoi(argv[2]); // Number of Runs
+    
+    double sumRunTime = 0; // Add up run times for averaging
 
     for (int iter = 0; iter < totalIterations; ++iter) {
         float** A = createMatrix(n, p);
@@ -99,9 +101,18 @@ int main(int argc, char *argv[]) {
         deleteMatrix(B, n);
         deleteMatrix(C, m);
 
-        // Output runtime to console        
-        cout << (endTime - startTime) << endl;
+        // Output runtime to console   
+        double runTime = endTime - startTime;
+        cout << runTime << endl;
+
+        sumRunTime += runTime;
     }
+
+    double meanRunTime = sumRunTime / totalIterations;
+
+    std::ofstream outputFile("MeanRunTimes.txt", std::ios::app); // Create MeanRunTime.txt file
+    outputFile << meanRunTime << std::endl; // Append content to the file
+    outputFile.close(); // Close the file
 
     return 0;
 }
