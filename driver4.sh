@@ -7,16 +7,12 @@ for value in $(seq 100 50 950); do
     values+=($value)
 done
 
-for value in $(seq 1000 100 1900); do
-    values+=($value)
-done
-
-for value in $(seq 2000 250 5000); do
+for value in $(seq 1000 100 2000); do
     values+=($value)
 done
 
 # Define the number of iterations
-iterations=10
+iterations=5
 
 # Loop through the values and run ./project_integrated.exe with each value and iterations as arguments
 for value in "${values[@]}"; do
