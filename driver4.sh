@@ -1,15 +1,15 @@
 #!/bin/bash
 
-# Define an array of values for X
-values=(10 25 50 75 100 150 200 250 300 350 400 450 500 550 600 650 700 750 800 850 900 950 1000)
+# Define an array of values (100, 200, 300, etc.)
+values=(10 25 50 75 100 200 300 400 500 600 700 800 900 1000 150 250 350 450 550 650 750 850 950)
 
-# Loop through each value of X
+# Define the number of iterations
+iterations=10
+
+# Loop through the values and run ./project_integrated.exe with each value and iterations as arguments
 for value in "${values[@]}"; do
-    # Run ./project.exe with the current value as an argument 10 times
-    for ((i=1; i<=10; i++)); do
-        echo "Running ./project.exe with argument $value, iteration $i"
-        ./project.exe "$value"
-    done
-    echo "Done with $value"
-    echo
+    echo "Running ./project_integrated.exe with arguments value=$value and iterations=$iterations"
+    ./project_integrated.exe "$value" "$iterations"
 done
+
+echo "Done with all values"
